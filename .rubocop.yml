@@ -1,0 +1,19 @@
+AllCops:
+  TargetRubyVersion: 3.1.1
+  Include:
+    - '**/*.rb'
+  Exclude:
+    - 'db/**/*'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'test/**/*'
+    - 'spec/**/*'
+
+Metrics/LineLength:
+  Max: 120
+
+Style/BlockDelimiters:
+  Enabled: true
+
+Lint/AmbiguousRegexpLiteral:
+  Enabled: false
