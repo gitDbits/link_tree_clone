@@ -3,7 +3,7 @@ AllCops:
   Include:
     - '**/*.rb'
   Exclude:
-    - 'vendor/'
+    - 'vendor/*/**'
     - 'db/**/*'
     - 'bin/**/*'
     - 'config/**/*'
