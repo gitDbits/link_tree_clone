@@ -1,0 +1,25 @@
+<div class="container">
+  <h1 style="text-align:center;">Appearance</h1>
+  <%= simple_form_for(current_user, 
+        url: registration_path(current_user), 
+        html: { method: :put },
+        data: { turbo: false }) do |f| %>
+    <div class="row">
+      <div class="col-6">
+        <div class="row mt-5 ">
+          <div class="col-4">
+            <%= image_tag(current_user.avatar, class:"avatar-image") if current_user.avatar.attached? %>
+          </div>
+          <div class="col-4">
+            <%= f.input :avatar, required: false, label: false %>
+          </div>
+          <div class="col-4">
+            <%= f.submit "Update Avatar" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+      </div>
+    </div>
+  <% end %>
+</div>
