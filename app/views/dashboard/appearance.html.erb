@@ -6,16 +6,34 @@
         data: { turbo: false }) do |f| %>
     <div class="row">
       <div class="col-6">
-        <div class="row mt-5 ">
-          <div class="col-4">
+        <div class="row mt-5">
+          <div class="col-6">
             <%= image_tag(current_user.avatar, class:"avatar-image") if current_user.avatar.attached? %>
           </div>
-          <div class="col-4">
+          <div class="col-6 mt-5">
             <%= f.input :avatar, required: false, label: false %>
           </div>
-          <div class="col-4">
-            <%= f.submit "Update Avatar" %>
+        </div>
+        <div class="row mt-5">
+          <div class="col-6 no-padding-col">
+            <%= f.input :full_name, placeholder: "Your full name...", label: false, class: "form-control", required: false %>
           </div>
+          <div class="col-6 no-padding-col">
+            <div class="input-group mb-3">
+              <span class="input-group-text">@</span>
+              <%= f.input :username, placeholder: "Your username...", label: false, class: "form-control", required: true %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col no-padding-col">
+            <div class="input-group row">
+              <%= f.input :body, placeholder: "About you...", label: false, class:"form-control", required: false%>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 no-padding-col">
+          <%= f.submit "Update Account", class:"btn btn-primary" %>
         </div>
       </div>
       <div class="col-6">
