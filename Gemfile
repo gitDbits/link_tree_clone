@@ -7,6 +7,7 @@ ruby '3.1.1'
 
 gem 'bootsnap', require: false
 gem 'devise', '~> 4.9'
+gem 'friendly_id', '~> 5.5'
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg', '~> 1.1'
@@ -32,3 +33,4 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
