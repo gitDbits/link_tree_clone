@@ -13,6 +13,10 @@ class DashboardController < ApplicationController
     redirect_to dashboard_path if @user.nil?
   end
 
+  def appearance
+    @should_render_navbar = true
+  end
+
   private
 
   def set_user
